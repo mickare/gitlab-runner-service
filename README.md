@@ -14,7 +14,7 @@ By default it uses the `gitlab/gitlab-runner:latest` image from the offical Dock
 
 ## Modification
 
-You are free to modify this project to your needs. If you have nice enhancements free to contribute back here, or make a fork so others can benefit.
+You are free to modify this project to your needs. If you have nice enhancements feel free to contribute back here, or make a fork so others can benefit.
 
 ### Gitlab Runner Image
 
