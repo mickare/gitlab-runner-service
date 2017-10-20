@@ -29,6 +29,6 @@ If you want to change the default location `/opt/gitlab-runner/` then you will n
     - This will copy the service file to the systemd folder and start the gitlab runner via docker-compose.
     - The service will automatically restarted, when failed, after system restarts, etc.
 3. [Register runner](https://docs.gitlab.com/runner/register/):
-    - Either `make register`,
-    - or `docker exec -it <container_name> /bin/bash -c "gitlab-runner register"` and replace `<container_name>` accordingly.
-    - You get your specific project token in the project settings - CI/CD.
+    - Either run `make register`,
+    - or run `docker exec -it <container_name> /bin/bash -c "gitlab-runner register"` and replace `<container_name>` accordingly.
+    - You get your specific project token in your project's CI/CD settings on the Gitlab web interface.
