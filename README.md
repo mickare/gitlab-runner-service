@@ -14,6 +14,8 @@ By default it uses the `gitlab/gitlab-runner:latest` image from the offical Dock
 
 ## Modification
 
+You are free to modify this project to your needs. If you have nice enhancements free to contribute back here, or make a fork so others can benefit.
+
 ### Gitlab Runner Image
 
 If you want to change the Gitlab runner image, or use a custom DTR (Docker Trusted Registry), then edit in the `docker-compose.yml` the line `image: gitlab/gitlab-runner:latest`.
@@ -24,10 +26,10 @@ If you want to change the default location `/opt/gitlab-runner/` then you will n
 
 ## Installation
 
-1. Copy directory `gitlab-runner` to `/opt/`, so the Makefile, etc are located under `/opt/gitlab-runner`.
-2. Run `make install`
+1. Copy the directory `gitlab-runner` to `/opt/`, so the Makefile, etc are located under `/opt/gitlab-runner`.
+2. Run `make install`.
     - This will copy the service file to the systemd folder and start the gitlab runner via docker-compose.
-    - The service will automatically restarted, when failed, after system restarts, etc.
+    - The service will automatically restart, when failed, after system restarts, etc.
 3. [Register runner](https://docs.gitlab.com/runner/register/):
     - Either run `make register`,
     - or run `docker exec -it <container_name> /bin/bash -c "gitlab-runner register"` and replace `<container_name>` accordingly.
