@@ -1,0 +1,4 @@
+concurrent = 1
+check_interval = 0
+
+# Here the registered runner are saved. Generated via "gitlab-runner register".

@@ -1,0 +1,15 @@
+[Unit]
+Description=Gitlab Runner Service  
+After=docker.service  
+Requires=docker.service
+
+[Service]
+# ExecStartPre=-/usr/local/bin/docker-compose -f /opt/gitlab-runner/docker-compose.yml down -v
+ExecStartPre=-/usr/bin/docker-compose -f /opt/gitlab-runner/docker-compose.yml pull
+ExecStart=/usr/local/bin/docker-compose -f /opt/gitlab-runner/docker-compose.yml up --force-recreate
+ExecStop=/usr/local/bin/docker-compose -f /opt/gitlab-runner/docker-compose.yml stop  
+
+
+[Install]
+WantedBy=multi-user.target  
+
